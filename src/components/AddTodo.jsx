@@ -13,8 +13,9 @@ const AddTodo = () => {
     setInput("");
   };
   return (
-    <form action="" onSubmit={addTodoHandler}>
+    <form action="" className="flex mb-7" onSubmit={addTodoHandler}>
       <input
+        className="w-full border border-black/10 rounded-l-lg px-3 outline-none duration-150 bg-white/20 py-1.5"
         type="text"
         placeholder="Add Todo"
         value={input}
@@ -22,7 +23,12 @@ const AddTodo = () => {
         name=""
         id=""
       />
-      <button type="submit">Add Todo</button>
+      <button
+        className="rounded-r-lg px-3 py-1 bg-green-600 text-white shrink-0 cursor-pointer hover:bg-green-700 duration-150"
+        type="submit"
+      >
+        Add Todo
+      </button>
     </form>
   );
 };
