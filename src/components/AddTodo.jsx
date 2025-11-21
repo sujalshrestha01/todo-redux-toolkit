@@ -7,6 +7,7 @@ const AddTodo = () => {
   const dispatch = useDispatch();
   const addTodoHandler = (e) => {
     e.preventDefault();
+ 
     // Dispatch addTodo action here
     dispatch(addTodo(input));
     // Clear the input field after adding the todo
@@ -19,6 +20,7 @@ const AddTodo = () => {
         type="text"
         placeholder="Add Todo"
         value={input}
+        required
         onChange={(e) => setInput(e.target.value)}
         name=""
         id=""
